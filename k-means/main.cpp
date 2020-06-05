@@ -34,7 +34,8 @@ int createMaskKmeans(cv::Mat src, cv::Mat &mask)
 
 int main()
 {
-	Mat src = imread("test.jpg");
+	Mat src = imread("test1.jpg");
+	resize(src, src,Size(640,360));
 	Mat mask = Mat::zeros(src.size(),CV_8UC1);
 	createMaskKmeans(src, mask);
 
